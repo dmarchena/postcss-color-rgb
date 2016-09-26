@@ -5,8 +5,9 @@ module.exports = postcss.plugin('postcss-color-rgb', function (opts) {
 
     // Work with options here
 
-    return (root, result) => {
-        root.walkDecls('color', decl => {
-        });
+    return function (root, result) {
+
+        // Transform CSS AST here
+
     };
 });
