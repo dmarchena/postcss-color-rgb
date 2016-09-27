@@ -19,7 +19,6 @@ function testFixture(t, name, pluginOpts = {}, postcssOpts = {}) {
             t.deepEqual(result.css, expected);
             t.deepEqual(result.warnings().length, 0);
         });
-    // fs.writeFile(fixturePath(`${name}.actual`), actual);
 }
 
 test('Recognizes rgb() with RGB range 0-255 input', t => {
