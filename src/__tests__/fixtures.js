@@ -21,6 +21,10 @@ function testFixture(t, name, pluginOpts = {}, postcssOpts = {}) {
         });
 }
 
-test('Recognizes rgb() with RGB range 0-255 input', t => {
+test('Transforms rgb() with RGB range 0-255 input', t => {
     return testFixture(t, 'rgb-0-255');
+});
+
+test('Transforms rgb() with percentage input', t => {
+    return testFixture(t, 'rgb-percentage');
 });
