@@ -1,10 +1,25 @@
+function convertSpaces(colorFn) {
+    const regex = /(\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)/g;
+    return colorFn.replace(regex, '$1, $2, $3');
+}
+
+function convertAlpha(colorFn) {
+    return colorFn.replace(/\s*\/\s*(\d*\.?\d+\%?)/g, (full, value) => {
+        if (value.indexOf('%') > -1) {
+            value = `${value.slice(0, -1) / 100}`;
+        }
+        value = value.replace(/^0\./, '.');
+        return `, ${value}`;
+    });
+}
+
 function legacy(colorFn) {
-    if (colorFn.indexOf('/') > -1) {
-        colorFn = colorFn.replace(/(rgb|hsl)/, '$1a');
+    let result = colorFn;
+    if (result.indexOf('/') > -1) {
+        result = result.replace(/(rgb|hsl)(?!a)/, '$1a');
+        result = convertAlpha(result);
     }
-    colorFn = colorFn.replace(/\s*\/\s*/g, ',');
-    colorFn = colorFn.replace(/(\s+)/g, ',');
-    return colorFn;
+    return convertSpaces(result);
 }
 
 export default { legacy };

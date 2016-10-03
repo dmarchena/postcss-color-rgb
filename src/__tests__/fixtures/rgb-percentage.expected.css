@@ -1,11 +1,11 @@
 em {
-	color: rgb(0.0,100.0,0.0);
+	color: rgb(0%, 100%, 0%);
 }
 
 em {
-	color: rgba(0.0,100.0,0.0,0);
+	color: rgba(0%, 100%, 0%, .8);
 }
 
 em {
-	color: rgba(0.0,100.0,0.0,0);
+	color: rgba(0%, 100%, 0%, 1);
 }

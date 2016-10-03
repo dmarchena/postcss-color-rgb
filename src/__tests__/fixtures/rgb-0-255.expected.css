@@ -1,11 +1,19 @@
 em { 
-	color: rgb(0,255,0);
+	color: rgb(0, 255, 0);
 }
 
 em { 
-	color: rgba(0,255,0,0);
+	color: rgba(0, 255, 0, 0);
 }
 
 em { 
-	color: rgba(0,255,0,0);
+	color: rgba(0, 255, 0, .8);
+}
+
+em { 
+	color: rgba(100, 255, 0, 1);
+}
+
+em { 
+	color: rgb(0, 255, 100);
 }
