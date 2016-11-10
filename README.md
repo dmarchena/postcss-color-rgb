@@ -11,7 +11,7 @@
 ```css
 .foo {
   /* Input example */
-  color: rgba(0 255 0 / .8);
+  color: rgb(0 255 0 / .8);
 }
 ```
 
