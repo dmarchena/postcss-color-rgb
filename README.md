@@ -8,18 +8,28 @@
 [cov-img]: https://coveralls.io/repos/github/dmarchena/postcss-slideshow/badge.svg
 [cov]:     https://coveralls.io/github/dmarchena/postcss-slideshow
 
+## CSS Colors 4 syntax
+
 ```
-// W3C CSS Colors 4 syntax
 rgb() = rgb( <percentage>{3} [ / <alpha-value> ]? ) |
         rgb( <number>{3} [ / <alpha-value> ]? )
-<alpha-value> = <number> | <percentage>
 
-// W3C CSS Colors 3 syntax (actual)
+<alpha-value> = <number> | <percentage>
+```
+
+## CSS Colors 3 syntax (actual)
+
+```
 rgb() = rgb( <percentage>#{3}) |
         rgb( <integer>#{3})
+
 rgba() = rgba( <percentage>#{3} , <alpha-value>? ) |
          rgba( <integer>#{3} , <alpha-value>? )
+
+<alpha-value> = <number>
 ```
+
+## Example
 
 ```css
 .foo {
