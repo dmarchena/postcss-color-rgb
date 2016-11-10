@@ -1,6 +1,6 @@
 # PostCSS Color Rgb [![Build Status][ci-img]][ci] [![Coverage Status][cov-img]][cov]
 
-[PostCSS] plugin to transform [W3C CSS Color Module Level 4 rgb() and rgba()](https://drafts.csswg.org/css-color/#funcdef-rgb) new syntax to actual syntax (rgb() or rgba()).
+[PostCSS] plugin to transform [W3C CSS Color Module Level 4 rgb()](https://drafts.csswg.org/css-color/#funcdef-rgb) new syntax to more compatible CSS (rgb() or rgba()).
 
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/dmarchena/postcss-color-rgb.svg
