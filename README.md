@@ -23,8 +23,8 @@ rgb() = rgb( <percentage>{3} [ / <alpha-value> ]? ) |
 rgb() = rgb( <percentage>#{3}) |
         rgb( <integer>#{3})
 
-rgba() = rgba( <percentage>#{3} , <alpha-value>? ) |
-         rgba( <integer>#{3} , <alpha-value>? )
+rgba() = rgba( <percentage>#{3} , <alpha-value> ) |
+         rgba( <integer>#{3} , <alpha-value> )
 
 <alpha-value> = <number>
 ```
