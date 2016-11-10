@@ -3,6 +3,10 @@ em {
 }
 
 em { 
+	color: rgb(200, 255, 0);
+}
+
+em { 
 	color: rgba(0, 255, 0, 0);
 }
 
@@ -14,6 +18,18 @@ em {
 	color: rgba(100, 255, 0, 1);
 }
 
+/* Actual syntax: ignored */
+
 em { 
 	color: rgb(0, 255, 100);
+}
+
+/* Written wrong: ignored */
+
+em { 
+	color: rgb(0, 255100);
+}
+
+em { 
+	color: rgb(100 255);
 }

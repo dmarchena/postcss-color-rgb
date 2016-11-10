@@ -28,3 +28,7 @@ test('Transforms rgb() with RGB range 0-255 input', t => {
 test('Transforms rgb() with percentage input', t => {
     return testFixture(t, 'rgb-percentage');
 });
+
+test('Transforms rgb() with number input instead of integer', t => {
+    return testFixture(t, 'rgb-number-to-integer');
+});

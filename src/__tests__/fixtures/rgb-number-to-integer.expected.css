@@ -7,9 +7,9 @@ em {
 }
 
 em { 
-	color: rgb(14, 1, 99);
+	color: rgba(14, 1, 99, .15);
 }
 
 em { 
-	color: rgb(14, 1, 99);
+	color: rgba(14, 0, 99, .8);
 }
