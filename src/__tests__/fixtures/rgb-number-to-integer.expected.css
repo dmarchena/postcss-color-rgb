@@ -7,6 +7,10 @@ em {
 }
 
 em { 
+	color: rgba(100, 255, 0, .8);
+}
+
+em { 
 	color: rgba(14, 1, 99, .15);
 }
 
