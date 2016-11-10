@@ -10,13 +10,15 @@
 
 ```css
 .foo {
-    /* Input example */
+  /* Input example */
+  color: rgb(0 255 0 / .8);
 }
 ```
 
 ```css
 .foo {
   /* Output example */
+  color: rgba(0, 255, 0, .8);
 }
 ```
 
