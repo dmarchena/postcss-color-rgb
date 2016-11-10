@@ -14,14 +14,14 @@ function legacyChannel(value) {
 }
 
 function getColorData(colorFn) {
-    const regex = /(rgb|hsl)a?\s*\((\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)(?:\s*\/\s*(\d*\.?\d+\%?))?\)/g; // eslint-disable-line max-len
+    const regex = /(\w{3})a?\s*\((\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)(?:\s*\/\s*(\d*\.?\d+\%?))?\)/g; // eslint-disable-line max-len
     const match = regex.exec(colorFn);
     if (match === null) return false;
     return {
         fn: match[1],
-        red: legacyChannel(match[2]),
-        green: legacyChannel(match[3]),
-        blue: legacyChannel(match[4]),
+        r: legacyChannel(match[2]),
+        g: legacyChannel(match[3]),
+        b: legacyChannel(match[4]),
         alpha: match[5] ? legacyAlpha(match[5]) : false
     };
 }
@@ -35,15 +35,15 @@ function legacy(colorFn) {
     if (colorData.alpha === false) {
         result =
             colorData.fn + '(' +
-                colorData.red + ', ' +
-                colorData.green + ', ' +
-                colorData.blue + ')';
+                colorData.r + ', ' +
+                colorData.g + ', ' +
+                colorData.b + ')';
     } else {
         result =
             colorData.fn + 'a(' +
-                colorData.red + ', ' +
-                colorData.green + ', ' +
-                colorData.blue + ', ' +
+                colorData.r + ', ' +
+                colorData.g + ', ' +
+                colorData.b + ', ' +
                 colorData.alpha + ')';
     }
     return result;

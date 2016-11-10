@@ -10,7 +10,7 @@
     "rgb",
     "rgba"
   ],
-  "author": "David Marchena <dvmarchena@gmail.com>",
+  "author": "David Marchena",
   "license": "MIT",
   "repository": "dmarchena/postcss-color-rgb",
   "bugs": {
