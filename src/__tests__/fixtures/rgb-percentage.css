@@ -1,4 +1,4 @@
 .foo {
-	color: rgb(0% 99.5% 0% / 80%);
-	background-image: linear-gradient(to bottom right, rgba(10% 11% 12%), rgb(50% 51% 52% / .5));
+	color: rgb(100% 99.5% 99% / 80%);
+	background-image: linear-gradient(to bottom right, rgba(10% 11% 12%), rgb(23% 24% 25% / .5));
 }
