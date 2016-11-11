@@ -32,3 +32,15 @@ test('Transforms rgb() with percentage input', t => {
 test('Transforms rgb() with number input instead of integer', t => {
     return testFixture(t, 'rgb-number-to-integer');
 });
+
+test('Transforms rgb() using new comma-separated syntax', t => {
+    return testFixture(t, 'alternative-syntax');
+});
+
+test('Actual rgb() is not affected', t => {
+    return testFixture(t, 'actual-syntax');
+});
+
+test('Wrong rgb() does not stop the plugin', t => {
+    return testFixture(t, 'wrong-written');
+});

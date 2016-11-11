@@ -1,19 +1,5 @@
-em { 
-	color: rgb(0 125.8 0);
-}
-
-em { 
+.foo { 
 	color: rgb(13.667 0 99.25);
-}
-
-em { 
-	color: rgba(99.99 255 0 / 80%);
-}
-
-em { 
-	color: rgb(13.667 .99 99.25/15%);
-}
-
-em { 
-	color: rgb(13.667 0.001 99.25 / .8);
+	background-color: rgba(0 .9 2.2/.2);
+	border: 1px solid rgba(100 102.2 103.111111 / 77%);
 }

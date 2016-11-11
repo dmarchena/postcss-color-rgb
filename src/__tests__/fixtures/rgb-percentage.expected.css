@@ -1,11 +1,4 @@
-em {
-	color: rgb(0%, 100%, 0%);
-}
-
-em {
+.foo {
 	color: rgba(0%, 99.5%, 0%, .8);
-}
-
-em {
-	color: rgba(0%, 100%, 0%, 1);
+	background-image: linear-gradient(to bottom right, rgb(10%, 11%, 12%), rgba(50%, 51%, 52%, .5));
 }

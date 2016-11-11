@@ -1,3 +1,4 @@
+
 function legacyAlpha(alpha) {
     if (alpha.indexOf('%') > -1) {
         alpha = `${alpha.slice(0, -1) / 100}`;
@@ -7,15 +8,16 @@ function legacyAlpha(alpha) {
 
 function legacyChannel(value) {
     if (value.indexOf('%') === -1) {
-        // value = value.replace(/^\./, '0.');
         value = '' + Math.round(value);
     }
     return value.replace(/^0\./, '.');
 }
 
 function getColorData(colorFn) {
-    const regex = /(\w{3})a?\s*\((\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)(?:\s*\/\s*(\d*\.?\d+\%?))?\)/g; // eslint-disable-line max-len
-    const match = regex.exec(colorFn);
+    /* const rgbSyntaxRegex = /(\w{3})a?\s*\((\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)
+    \s+(\d*\.?\d+\%?)(?:\s*\/\s*(\d*\.?\d+\%?))?\)/g; */
+    const rgbSyntaxPlusAltRegex = /(rgb)a?\s*\((\d*\.?\d+\%?)(?:\s+|(?:\s*,\s*))(\d*\.?\d+\%?)(?:\s+|(?:\s*,\s*))(\d*\.?\d+\%?)(?:\s*(?:\/|,)\s*(\d*\.?\d+\%?))?\)/g; // eslint-disable-line max-len
+    const match = rgbSyntaxPlusAltRegex.exec(colorFn);
     if (match === null) return false;
     return {
         fn: match[1],

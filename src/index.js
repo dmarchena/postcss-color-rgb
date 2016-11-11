@@ -1,6 +1,6 @@
 import postcss from 'postcss';
 import parser from 'postcss-value-parser';
-import functionalNotation from './lib/color-functional-notation';
+import functionalNotation from './lib/rgb-functional-notation';
 
 function transformRgb(value) {
     return parser(value).walk(node => {
