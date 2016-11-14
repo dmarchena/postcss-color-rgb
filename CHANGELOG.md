@@ -1,3 +1,7 @@
+# 1.1.2 - 2016-11-14
+
+- Fix dist files
+
 # 1.1.1 - 2016-11-13
 
 - Fix coveralls badge

@@ -1,6 +1,6 @@
 {
   "name": "postcss-color-rgb",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "PostCSS plugin to transform W3C CSS Color Module Level 4 rgb() new syntax to more compatible CSS (comma-separated rgb() or rgba())",
   "keywords": [
     "postcss",
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/dmarchena/postcss-color-rgb",
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "!**/__tests__"
   ],
   "dependencies": {
     "postcss": "^5.2.0"
@@ -46,7 +47,8 @@
     "test:ava": "ava",
     "test": "nyc npm run test:ava",
     "prebuild": "npm-run-all clean lint",
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build"
   },
   "babel": {
     "presets": [
