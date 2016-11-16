@@ -1,10 +1,18 @@
+# 1.1.3 - 2016-11-16
+
+- Fix: Transform correctly when using spaces inside of parentheses
+
+```
+rgb( 100 102 103 / .3 );
+```
+
 # 1.1.2 - 2016-11-14
 
-- Fix dist files
+- Fix: dist files
 
 # 1.1.1 - 2016-11-13
 
-- Fix coveralls badge
+- Fix: coveralls badge
 
 # 1.1.0 - 2016-11-11
 

@@ -16,7 +16,7 @@ function legacyChannel(value) {
 function getColorData(colorFn) {
     /* const rgbSyntaxRegex = /(\w{3})a?\s*\((\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)
     \s+(\d*\.?\d+\%?)(?:\s*\/\s*(\d*\.?\d+\%?))?\)/g; */
-    const rgbSyntaxPlusAltRegex = /(rgb)a?\s*\((\d*\.?\d+\%?)(?:\s+|(?:\s*,\s*))(\d*\.?\d+\%?)(?:\s+|(?:\s*,\s*))(\d*\.?\d+\%?)(?:\s*(?:\/|,)\s*(\d*\.?\d+\%?))?\)/g; // eslint-disable-line max-len
+    const rgbSyntaxPlusAltRegex = /(rgb)a?\s*\(\s*(\d*\.?\d+\%?)(?:\s+|(?:\s*,\s*))(\d*\.?\d+\%?)(?:\s+|(?:\s*,\s*))(\d*\.?\d+\%?)(?:\s*(?:\/|,)\s*(\d*\.?\d+\%?))?\s*\)/g; // eslint-disable-line max-len
     const match = rgbSyntaxPlusAltRegex.exec(colorFn);
     if (match === null) return false;
     return {
