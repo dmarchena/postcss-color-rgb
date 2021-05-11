@@ -1,4 +1,3 @@
-const postcss = require('postcss');
 const parser = require('postcss-value-parser');
 const functionalNotation = require('./lib/rgb-functional-notation');
 
