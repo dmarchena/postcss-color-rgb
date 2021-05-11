@@ -1,13 +1,13 @@
 
 function legacyAlpha(alpha) {
-    if (alpha.indexOf('%') > -1) {
+    if (alpha.includes('%')) {
         alpha = `${alpha.slice(0, -1) / 100}`;
     }
     return alpha.replace(/^0\./, '.');
 }
 
 function legacyChannel(value) {
-    if (value.indexOf('%') === -1) {
+    if (!value.includes('%')) {
         value = '' + Math.round(value);
     }
     return value.replace(/^0\./, '.');
@@ -16,8 +16,9 @@ function legacyChannel(value) {
 function getColorData(colorFn) {
     /* const rgbSyntaxRegex = /(\w{3})a?\s*\((\d*\.?\d+\%?)\s+(\d*\.?\d+\%?)
     \s+(\d*\.?\d+\%?)(?:\s*\/\s*(\d*\.?\d+\%?))?\)/g; */
-    const rgbSyntaxPlusAltRegex = /(rgb)a?\s*\(\s*(\d*\.?\d+\%?)(?:\s+|(?:\s*,\s*))(\d*\.?\d+\%?)(?:\s+|(?:\s*,\s*))(\d*\.?\d+\%?)(?:\s*(?:\/|,)\s*(\d*\.?\d+\%?))?\s*\)/g; // eslint-disable-line max-len
-    const match = rgbSyntaxPlusAltRegex.exec(colorFn);
+    let rgbSyntaxPlusAltRegex = /(rgb)a?\s*\(\s*(\d*\.?\d+%?)(?:\s+|(?:\s*,\s*))(\d*\.?\d+%?)(?:\s+|(?:\s*,\s*))(\d*\.?\d+%?)(?:\s*[,/]\s*(\d*\.?\d+%?))?\s*\)/g; // eslint-disable-line max-len,security/detect-unsafe-regex
+
+    let match = rgbSyntaxPlusAltRegex.exec(colorFn);
     if (match === null) return false;
     return {
         fn: match[1],
@@ -29,7 +30,7 @@ function getColorData(colorFn) {
 }
 
 function legacy(colorFn) {
-    const colorData = getColorData(colorFn);
+    let colorData = getColorData(colorFn);
 
     if (!colorData) return colorFn;
 
@@ -51,4 +52,4 @@ function legacy(colorFn) {
     return result;
 }
 
-export default { legacy };
+module.exports = { legacy };
